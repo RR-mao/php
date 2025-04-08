@@ -5,7 +5,10 @@
     $result=mysqli_query($conn, "select * from user");
     #mysqli_fetch_array() 從查詢出來的資料一筆一筆抓出來
     $row=mysqli_fetch_array($result);
+    // 輸出第一筆資料中的id和pwd欄位，並換行
     echo $row["id"] . " " . $row["pwd"]."<br>"; 
+    // 這行取出第二筆資料
     $row=mysqli_fetch_array($result);
+    // 輸出第二筆資料中的id和pwd欄位
     echo $row["id"] . " " . $row["pwd"];
 ?>
