@@ -1,5 +1,5 @@
 <html>
-    <head><title>html+php</title></head>      
+    <head><title>html+php</title></head>#頁面標題  
     <body>
         <?php echo "Hello world!"; ?> 
         <h1>html</h1>
