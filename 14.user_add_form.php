@@ -17,7 +17,7 @@
     else{    
         echo "
             // 表單提交至 15.user_add.php，使用 POST 方法
-            <form action=15.user_add.php method=post>
+            <form action=15.user_add.php method=post>   
                 // 輸入帳號欄位
                 帳號：<input type=text name=id><br>
                 // 輸入密碼欄位
