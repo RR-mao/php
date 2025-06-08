@@ -1,9 +1,12 @@
 <html>
     <head><title>明新科技大學資訊管理系</title>
     <meta charset="utf-8">
+    // 載入輪播功能的樣式與 JS
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>  
+
+    // 啟用輪播效果
     <script>
         $(window).load(function() {
             $('.flexslider').flexslider({
@@ -12,12 +15,16 @@
             });
         });
     </script>
+        
+    // CSS 區塊：定義整個頁面的外觀與版面配置
     <style>
         *{
             margin:0;
             color:gray;
             text-align:center;
         }
+
+         // 頁首區：LOGO與登入按鈕
         /* top */
         .top{
              background-color: white;
@@ -45,6 +52,8 @@
         .top .top-nav a{
             text-decoration: none;
         }
+        
+        /*主導覽列：連結至首頁、簡介、師資等*/
         /* nav */
         .nav {
             background-color:#333;
@@ -92,7 +101,8 @@
             display: block;
             text-align: left;
         }
-
+        
+        // 輪播圖片區
         /* slider */
         .slider{
             background-color: black;
