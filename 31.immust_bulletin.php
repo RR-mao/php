@@ -1,7 +1,8 @@
 <html>
     <head><title>明新科技大學資訊管理系</title>
     <meta charset="utf-8">
-    // 載入輪播功能的樣式與 JS
+        
+    /* 載入 Flexslider 所需 CSS 和 JS */
     <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>  
@@ -16,7 +17,7 @@
         });
     </script>
         
-    // CSS 區塊：定義整個頁面的外觀與版面配置
+    /* 全站預設樣式（灰字＋置中） */
     <style>
         *{
             margin:0;
@@ -24,7 +25,7 @@
             text-align:center;
         }
 
-         // 頁首區：LOGO與登入按鈕
+         /* 頁面上方橫幅：校名與登入連結 */
         /* top */
         .top{
              background-color: white;
@@ -102,7 +103,7 @@
             text-align: left;
         }
         
-        // 輪播圖片區
+         /* 輪播圖片區域 */
         /* slider */
         .slider{
             background-color: black;
@@ -213,6 +214,8 @@
             background-color: rgba(255,255,255,0.9); /* Black w/ opacity */
             padding-top: 50px;
         }  /*登入畫面css*/
+
+         /* 佈告欄：顯示公告資料，透過 PHP 動態產生表格 */
         /*佈告欄*/
         .bulletin{
             display: block;
@@ -241,6 +244,8 @@
     </style>
     </head>
     <body>
+
+        /*頁面頂端：Logo 與登入區*/
         <div class="top">
             <div class="container">
                 <div class="logo">
@@ -264,6 +269,8 @@
                 </div>
               </div>
         </div>
+
+        /*主導覽列*/
         <div class="nav">   
             <ul>
                 <li><a href="#home">首頁</a></li>
@@ -278,6 +285,8 @@
                 <li><a href="#about">相關資訊</a></li>
             </ul>
         </div>
+        
+        /*輪播圖片*/
         <div class="slider">
             <div class="flexslider">
                 <ul class="slides">
@@ -287,10 +296,13 @@
                 </ul>
             </div>
         </div>
+
+        /*佈告欄：由 PHP 從資料庫載入資料*/
         <!---佈告欄--->
         <div class="bulletin">
            <h1>最新公告</h1>
             <?php
+                // 建立資料庫連線並查詢佈告內容
                 $conn=mysqli_connect("db4free.net", "immust", "immustimmust", "immust");
                 $result=mysqli_query($conn, "select * from bulletin");
                 echo "<table border=2><tr><th>佈告編號</th><th>佈告類別</th><th>標題</th><th>佈告內容</th><th>發佈時間</th></tr>";
